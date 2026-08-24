@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Portofolio Profesional - Full-Stack Web Developer & UI/UX Designer. Menampilkan karya terbaik, keahlian teknologi, dan riwayat pengalaman.">
+        content="Portofolio Rahmat Fitrah - Mahasiswa Teknik Informatika & Data Analyst. Menampilkan keahlian analisis data, pemrograman Python, Streamlit, dan administrasi data.">
     <meta name="keywords"
-        content="Portfolio, Full-Stack Developer, Web Developer Indonesia, UI/UX Designer, Frontend, Backend">
+        content="Rahmat Fitrah, Portofolio, Teknik Informatika, Data Analyst Sukabumi, Streamlit, Python Developer, Input Data, Kaggle Indonesia">
     <meta name="author" content="Rahmat Fitrah">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Rahmat Fitrah | Full-Stack Developer & UI/UX Craftsman">
-    <meta property="og:description" content="Koleksi proyek pilihan, keahlian teknis, dan solusi digital inovatif.">
+    <meta property="og:title" content="Rahmat Fitrah | Portofolio Teknik Informatika & Analisis Data">
+    <meta property="og:description" content="Koleksi proyek akademik, analisis data Kaggle, dan aplikasi analitik Streamlit.">
     <meta property="og:type" content="website">
 
-    <title>Rahmat Fitrah | Portofolio Web Developer & UI/UX</title>
+    <title>Rahmat Fitrah | Portofolio Teknik Informatika & Analisis Data</title>
 
     <!-- Google Fonts: Outfit & Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,11 +102,7 @@
                     </h1>
 
                     <p class="hero-description">
-                        Mahasiswa Teknik Informatika semester 5 di Nusa Putra University Kota Sukabumi. Berpengalaman
-                        mengerjakan proyek berbasis data dan aplikasi analitik, seperti membangun website menggunakan
-                        Streamlit untuk membaca laba omset UMKM,serta aktif mengikuti berbagai sertifikasi dan workshop
-                        (Public Speaking, Workshop Teknik
-                        Informatika, serta Seminar Nasional Teknik Informatika & Teknik Elektro).
+                        Mahasiswa S1 Teknik Informatika semester 4 di Universitas Nusa Putra Kota Sukabumi. Berfokus pada penginputan data, analisis data menggunakan dataset Kaggle, serta pengembangan aplikasi visualisasi data berbasis Streamlit dan Python.
                     </p>
 
                     <!-- Call To Action Buttons -->
@@ -119,10 +115,10 @@
                             <i class="fa-regular fa-envelope"></i>
                             <span>Hubungi Saya</span>
                         </a>
-                        <a href="#resume" class="btn btn-ghost" id="downloadCvBtn" title="Unduh CV PDF">
-                            <i class="fa-solid fa-file-arrow-down"></i>
+                        <button class="btn btn-ghost" id="downloadCvBtn" title="Lihat & Cetak CV">
+                            <i class="fa-solid fa-file-invoice"></i>
                             <span>CV Saya</span>
-                        </a>
+                        </button>
                     </div>
 
                     <!-- Social Links Strip -->
@@ -181,12 +177,12 @@
 
                             <!-- Mini Code Snippet in Card -->
                             <div class="code-snippet-box">
-                                <pre><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
-  <span class="c-prop">name</span>: <span class="c-str">'Rahmat Fitrah'</span>,
-  <span class="c-prop">passion</span>: [<span class="c-str">'Code'</span>, <span class="c-str">'Clean UI'</span>, <span class="c-str">'Speed'</span>],
-  <span class="c-prop">coffee</span>: <span class="c-num">Infinity</span>,
-  <span class="c-func">solveProblem</span>: () =&gt; <span class="c-keyword">true</span>
-};</code></pre>
+                                <pre><code><span class="c-keyword">import</span> streamlit <span class="c-keyword">as</span> st
+<span class="c-keyword">import</span> pandas <span class="c-keyword">as</span> pd
+
+st.title(<span class="c-str">"Analisis Data Rahmat Fitrah 📊"</span>)
+df = pd.read_csv(<span class="c-str">"data_kaggle.csv"</span>)
+st.write(df.describe())</code></pre>
                             </div>
                         </div>
                     </div>
@@ -198,26 +194,26 @@
                 <div class="stats-grid glass-card">
                     <div class="stat-item">
                         <div class="stat-number" data-target="4">0</div>
-                        <div class="stat-suffix">+</div>
-                        <p class="stat-label">Tahun Pengalaman</p>
+                        <div class="stat-suffix"></div>
+                        <p class="stat-label">Semester Aktif</p>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="35">0</div>
+                        <div class="stat-number" data-target="5">0</div>
                         <div class="stat-suffix">+</div>
-                        <p class="stat-label">Proyek Selesai</p>
+                        <p class="stat-label">Workshop & Seminar</p>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="28">0</div>
+                        <div class="stat-number" data-target="10">0</div>
                         <div class="stat-suffix">+</div>
-                        <p class="stat-label">Klien Puas</p>
+                        <p class="stat-label">Dataset Kaggle</p>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="99">0</div>
+                        <div class="stat-number" data-target="100">0</div>
                         <div class="stat-suffix">%</div>
-                        <p class="stat-label">Kepuasan & Kualitas</p>
+                        <p class="stat-label">Ketelitian Kerja</p>
                     </div>
                 </div>
             </div>
@@ -228,7 +224,7 @@
             <div class="container">
                 <div class="section-header" data-reveal="fade-up">
                     <span class="section-subtitle">TENTANG SAYA</span>
-                    <h2 class="section-title">Membangun Solusi Digital Dengan Presisi & Antusiasme</h2>
+                    <h2 class="section-title">Mengolah Data Menjadi Informasi Bernilai</h2>
                     <div class="section-bar"></div>
                 </div>
 
@@ -236,26 +232,20 @@
                     <div class="about-image-col" data-reveal="fade-right">
                         <div class="about-card glass-card">
                             <div class="about-profile-badge">
-                                <div class="badge-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                <div class="badge-icon"><i class="fa-solid fa-chart-bar"></i></div>
                                 <div class="badge-text">
-                                    <strong>Full-Stack</strong>
-                                    <span>Software Engineer</span>
+                                    <strong>Teknik Informatika</strong>
+                                    <span>Data Analyst & Entry</span>
                                 </div>
                             </div>
                             <p class="about-bio-text">
-                                Saya adalah seorang Software Engineer yang berfokus pada ekosistem JavaScript/TypeScript
-                                modern, arsitektur REST/GraphQL API, dan antarmuka web responsif dengan standar UI/UX
-                                tinggi.
+                                Saya adalah mahasiswa S1 Teknik Informatika di Universitas Nusa Putra (Semester 4) dengan IPK 3.55. Berdedikasi dalam pengolahan data, penginputan data secara teliti, serta memiliki antusiasme tinggi untuk menganalisis data menggunakan Python dan Streamlit.
                             </p>
                             <div class="about-highlights">
-                                <div class="highlight-pill"><i class="fa-solid fa-check-circle"></i> Clean Code
-                                    Architecture</div>
-                                <div class="highlight-pill"><i class="fa-solid fa-check-circle"></i> Responsive &
-                                    Mobile-First</div>
-                                <div class="highlight-pill"><i class="fa-solid fa-check-circle"></i> SEO & Performance
-                                    Optimized</div>
-                                <div class="highlight-pill"><i class="fa-solid fa-check-circle"></i> Seamless Database
-                                    Design</div>
+                                <div class="highlight-pill"><i class="fa-solid fa-check-circle"></i> Pencatatan & Pengelolaan Data</div>
+                                <div class="highlight-pill"><i class="fa-solid fa-check-circle"></i> Analisis Data Kaggle</div>
+                                <div class="highlight-pill"><i class="fa-solid fa-check-circle"></i> Pemrograman Python & Streamlit</div>
+                                <div class="highlight-pill"><i class="fa-solid fa-check-circle"></i> Ketelitian & Akurasi Kerja</div>
                             </div>
                         </div>
                     </div>
@@ -263,29 +253,26 @@
                     <div class="about-details-col" data-reveal="fade-left">
                         <div class="about-cards-list">
                             <div class="info-card glass-card">
-                                <div class="info-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                                <div class="info-icon"><i class="fa-solid fa-file-excel"></i></div>
                                 <div class="info-content">
-                                    <h3>Pemikiran Desain Kreatif</h3>
-                                    <p>Tidak hanya menulis kode fungsional, tetapi juga memastikan setiap interaksi
-                                        pengguna terasa intuitif, cepat, dan memuaskan.</p>
+                                    <h3>Pengelolaan Data Akurat</h3>
+                                    <p>Berfokus pada administrasi, entry data, dan pengolahan spreadsheet secara presisi guna meminimalkan kesalahan pembacaan manual.</p>
                                 </div>
                             </div>
 
                             <div class="info-card glass-card">
-                                <div class="info-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                <div class="info-icon"><i class="fa-solid fa-handshake"></i></div>
                                 <div class="info-content">
-                                    <h3>Keamanan & Skalabilitas</h3>
-                                    <p>Menerapkan standar praktik terbaik dalam otentikasi, enkripsi data, dan
-                                        perancangan basis data yang siap berkembang.</p>
+                                    <h3>Kerjasama & Adaptasi</h3>
+                                    <p>Dapat bekerjasama secara harmonis dengan tim, aktif berkoordinasi, dan memiliki kemudahan beradaptasi dengan lingkungan kerja baru.</p>
                                 </div>
                             </div>
 
                             <div class="info-card glass-card">
-                                <div class="info-icon"><i class="fa-solid fa-comments"></i></div>
+                                <div class="info-icon"><i class="fa-solid fa-gauge-high"></i></div>
                                 <div class="info-content">
-                                    <h3>Komunikasi Kolaboratif</h3>
-                                    <p>Terbiasa bekerja dalam tim Agile/Scrum, manajemen tugas terstruktur melalui
-                                        Git/GitHub, dan pelaporan progres yang transparan.</p>
+                                    <h3>Penyusunan Laporan Cepat</h3>
+                                    <p>Mengintegrasikan dataset menjadi visualisasi analitik interaktif berbasis web untuk mendukung laporan hasil yang jauh lebih cepat.</p>
                                 </div>
                             </div>
                         </div>
@@ -298,28 +285,52 @@
         <section class="section skills-section" id="skills">
             <div class="container">
                 <div class="section-header" data-reveal="fade-up">
-                    <span class="section-subtitle">KEAHLIAN & TEKNOLOGI</span>
-                    <h2 class="section-title">Teknologi Yang Saya Kuasai</h2>
+                    <span class="section-subtitle">KEAHLIAN & KEMAMPUAN</span>
+                    <h2 class="section-title">Bidang Kompetensi</h2>
                     <div class="section-bar"></div>
-                    <p class="section-desc">Peralatan, bahasa pemrograman, dan framework pilihan untuk menghasilkan
-                        produk berkualitas tinggi.</p>
+                    <p class="section-desc">Kombinasi keahlian teknis pengolahan data serta kompetensi interpersonal pendukung kerja.</p>
                 </div>
 
                 <!-- Category Tabs -->
                 <div class="skills-tabs" data-reveal="fade-up">
                     <button class="skill-tab active" data-category="all">Semua</button>
-                    <button class="skill-tab" data-category="frontend">Frontend</button>
-                    <button class="skill-tab" data-category="backend">Backend & DB</button>
-                    <button class="skill-tab" data-category="tools">Tools & DevOps</button>
+                    <button class="skill-tab" data-category="tech">Teknis & Data</button>
+                    <button class="skill-tab" data-category="personal">Kemampuan Personal</button>
                 </div>
 
                 <div class="skills-grid" id="skillsGrid">
-                    <!-- Frontend Skills -->
-                    <div class="skill-card glass-card" data-cat="frontend" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-html5 text-orange"></i></div>
+                    <!-- Teknis & Data -->
+                    <div class="skill-card glass-card" data-cat="tech" data-reveal="zoom-in">
+                        <div class="skill-icon-wrap"><i class="fa-brands fa-python text-blue-yellow"></i></div>
                         <div class="skill-info">
                             <div class="skill-title-row">
-                                <span class="skill-name">HTML5 & Semantic</span>
+                                <span class="skill-name">Pemrograman Python</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-cat="tech" data-reveal="zoom-in">
+                        <div class="skill-icon-wrap"><i class="fa-solid fa-chart-line text-cyan"></i></div>
+                        <div class="skill-info">
+                            <div class="skill-title-row">
+                                <span class="skill-name">Streamlit Web Apps</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-cat="tech" data-reveal="zoom-in">
+                        <div class="skill-icon-wrap"><i class="fa-solid fa-file-excel text-green"></i></div>
+                        <div class="skill-info">
+                            <div class="skill-title-row">
+                                <span class="skill-name">Pencatatan & Input Data</span>
                                 <span class="skill-percent">95%</span>
                             </div>
                             <div class="progress-bar">
@@ -328,64 +339,11 @@
                         </div>
                     </div>
 
-                    <div class="skill-card glass-card" data-cat="frontend" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-css3-alt text-blue"></i></div>
+                    <div class="skill-card glass-card" data-cat="tech" data-reveal="zoom-in">
+                        <div class="skill-icon-wrap"><i class="fa-solid fa-database text-teal"></i></div>
                         <div class="skill-info">
                             <div class="skill-title-row">
-                                <span class="skill-name">CSS3 / SASS / Flex-Grid</span>
-                                <span class="skill-percent">90%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card glass-card" data-cat="frontend" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-js text-yellow"></i></div>
-                        <div class="skill-info">
-                            <div class="skill-title-row">
-                                <span class="skill-name">JavaScript (ES6+)</span>
-                                <span class="skill-percent">92%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 92%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card glass-card" data-cat="frontend" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-react text-cyan"></i></div>
-                        <div class="skill-info">
-                            <div class="skill-title-row">
-                                <span class="skill-name">React.js & Next.js</span>
-                                <span class="skill-percent">88%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 88%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Backend & Database Skills -->
-                    <div class="skill-card glass-card" data-cat="backend" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-node-js text-green"></i></div>
-                        <div class="skill-info">
-                            <div class="skill-title-row">
-                                <span class="skill-name">Node.js & Express</span>
-                                <span class="skill-percent">85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card glass-card" data-cat="backend" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-python text-blue-yellow"></i></div>
-                        <div class="skill-info">
-                            <div class="skill-title-row">
-                                <span class="skill-name">Python & FastAPI</span>
+                                <span class="skill-name">Kaggle Data Analysis & SQL</span>
                                 <span class="skill-percent">80%</span>
                             </div>
                             <div class="progress-bar">
@@ -394,24 +352,25 @@
                         </div>
                     </div>
 
-                    <div class="skill-card glass-card" data-cat="backend" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-solid fa-database text-teal"></i></div>
+                    <!-- Kemampuan Personal -->
+                    <div class="skill-card glass-card" data-cat="personal" data-reveal="zoom-in">
+                        <div class="skill-icon-wrap"><i class="fa-solid fa-users text-blue"></i></div>
                         <div class="skill-info">
                             <div class="skill-title-row">
-                                <span class="skill-name">PostgreSQL & MySQL</span>
-                                <span class="skill-percent">86%</span>
+                                <span class="skill-name">Kerja Sama Tim</span>
+                                <span class="skill-percent">95%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: 86%"></div>
+                                <div class="progress-fill" style="width: 95%"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="skill-card glass-card" data-cat="backend" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-solid fa-server text-indigo"></i></div>
+                    <div class="skill-card glass-card" data-cat="personal" data-reveal="zoom-in">
+                        <div class="skill-icon-wrap"><i class="fa-solid fa-arrows-spin text-orange"></i></div>
                         <div class="skill-info">
                             <div class="skill-title-row">
-                                <span class="skill-name">RESTful APIs & GraphQL</span>
+                                <span class="skill-name">Mudah Beradaptasi</span>
                                 <span class="skill-percent">90%</span>
                             </div>
                             <div class="progress-bar">
@@ -420,38 +379,24 @@
                         </div>
                     </div>
 
-                    <!-- Tools & DevOps -->
-                    <div class="skill-card glass-card" data-cat="tools" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-git-alt text-red"></i></div>
+                    <div class="skill-card glass-card" data-cat="personal" data-reveal="zoom-in">
+                        <div class="skill-icon-wrap"><i class="fa-solid fa-circle-check text-red"></i></div>
                         <div class="skill-info">
                             <div class="skill-title-row">
-                                <span class="skill-name">Git & GitHub Workflow</span>
-                                <span class="skill-percent">92%</span>
+                                <span class="skill-name">Ketelitian & Akurasi</span>
+                                <span class="skill-percent">98%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: 92%"></div>
+                                <div class="progress-fill" style="width: 98%"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="skill-card glass-card" data-cat="tools" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-docker text-sky"></i></div>
+                    <div class="skill-card glass-card" data-cat="personal" data-reveal="zoom-in">
+                        <div class="skill-icon-wrap"><i class="fa-solid fa-bullhorn text-purple"></i></div>
                         <div class="skill-info">
                             <div class="skill-title-row">
-                                <span class="skill-name">Docker & Containerization</span>
-                                <span class="skill-percent">78%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 78%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card glass-card" data-cat="tools" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-figma text-purple"></i></div>
-                        <div class="skill-info">
-                            <div class="skill-title-row">
-                                <span class="skill-name">Figma & UI Prototyping</span>
+                                <span class="skill-name">Public Speaking</span>
                                 <span class="skill-percent">85%</span>
                             </div>
                             <div class="progress-bar">
@@ -459,19 +404,9 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="skill-card glass-card" data-cat="tools" data-reveal="zoom-in">
-                        <div class="skill-icon-wrap"><i class="fa-solid fa-cloud text-amber"></i></div>
-                        <div class="skill-info">
-                            <div class="skill-title-row">
-                                <span class="skill-name">Vercel, Netlify & AWS</span>
-                                <span class="skill-percent">84%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 84%"></div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+        </section>
                 </div>
             </div>
         </section>
@@ -483,16 +418,14 @@
                     <span class="section-subtitle">PORTOFOLIO KARYA</span>
                     <h2 class="section-title">Proyek Pilihan & Studi Kasus</h2>
                     <div class="section-bar"></div>
-                    <p class="section-desc">Beberapa proyek komersial dan open-source yang telah saya kerjakan dengan
-                        fokus pada dampak nyata dan performa tinggi.</p>
+                    <p class="section-desc">Proyek pengerjaan analisis data, visualisasi, dan aplikasi web machine learning.</p>
                 </div>
 
                 <!-- Project Filter Buttons -->
                 <div class="project-filters" data-reveal="fade-up">
                     <button class="filter-btn active" data-filter="all">Semua Proyek</button>
                     <button class="filter-btn" data-filter="webapp">Web Application</button>
-                    <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile / UI</button>
+                    <button class="filter-btn" data-filter="data-analysis">Analisis Data</button>
                 </div>
 
                 <!-- Projects Grid -->
@@ -505,171 +438,66 @@
                             <div class="thumb-gradient bg-proj-1">
                                 <div class="thumb-mockup">
                                     <i class="fa-solid fa-chart-line mockup-icon"></i>
-                                    <span>SaaS Analytics Hub</span>
+                                    <span>Streamlit Web App</span>
                                 </div>
                             </div>
                             <div class="thumb-overlay">
                                 <button class="btn btn-sm btn-light open-modal-btn" data-project="1">
-                                    <i class="fa-solid fa-eye"></i> Detail Studi Kasus
+                                    <i class="fa-solid fa-eye"></i> Detail Proyek
                                 </button>
                             </div>
                         </div>
                         <div class="project-content">
                             <div class="project-tags">
-                                <span class="tag">Next.js</span>
-                                <span class="tag">TypeScript</span>
-                                <span class="tag">Tailwind</span>
-                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Data Analysis</span>
                             </div>
-                            <h3 class="project-title">CloudPulse - Platform Analitik SaaS Real-Time</h3>
+                            <h3 class="project-title">Decent Work & Economic Growth (SDG 8.3)</h3>
                             <p class="project-desc">
-                                Dashboard analitik dengan visualisasi metrik performa real-time, integrasi webhook
-                                otomatis, dan sistem laporan ekspor PDF multi-bahasa.
+                                Aplikasi web analitik interaktif berbasis Streamlit untuk menyajikan visualisasi data ekonomi, mempercepat pemahaman tren dibanding cara manual.
                             </p>
                             <div class="project-links">
                                 <button class="link-btn open-modal-btn" data-project="1">
                                     <span>Lihat Detail</span>
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </button>
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon"
-                                    title="Source Code">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://example.com" target="_blank" rel="noopener noreferrer"
-                                    class="link-icon" title="Live Preview">
-                                    <i class="fa-solid fa-globe"></i>
-                                </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 2 -->
-                    <article class="project-card glass-card" data-category="ecommerce" data-reveal="fade-up">
+                    <article class="project-card glass-card" data-category="data-analysis" data-reveal="fade-up">
                         <div class="project-thumb">
                             <div class="thumb-gradient bg-proj-2">
                                 <div class="thumb-mockup">
-                                    <i class="fa-solid fa-bag-shopping mockup-icon"></i>
-                                    <span>Fashion E-Store</span>
+                                    <i class="fa-solid fa-database mockup-icon"></i>
+                                    <span>Kaggle Analysis</span>
                                 </div>
                             </div>
                             <div class="thumb-overlay">
                                 <button class="btn btn-sm btn-light open-modal-btn" data-project="2">
-                                    <i class="fa-solid fa-eye"></i> Detail Studi Kasus
+                                    <i class="fa-solid fa-eye"></i> Detail Proyek
                                 </button>
                             </div>
                         </div>
                         <div class="project-content">
                             <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Node.js</span>
-                                <span class="tag">Midtrans Payment</span>
-                                <span class="tag">MongoDB</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Kaggle Datasets</span>
+                                <span class="tag">EDA</span>
                             </div>
-                            <h3 class="project-title">LuxeWear - Toko Fashion Online Interaktif</h3>
+                            <h3 class="project-title">Koleksi Analisis Data & Input Data</h3>
                             <p class="project-desc">
-                                Situs e-commerce pakaian dengan keranjang belanja dinamis, checkout otomatis
-                                terintegrasi Payment Gateway Indonesia, dan panel admin inventori.
+                                Eksplorasi data (EDA) dari berbagai dataset Kaggle, berfokus pada pembersihan data (data cleaning) dan ketelitian pencatatan informasi.
                             </p>
                             <div class="project-links">
                                 <button class="link-btn open-modal-btn" data-project="2">
                                     <span>Lihat Detail</span>
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </button>
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon"
-                                    title="Source Code">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://example.com" target="_blank" rel="noopener noreferrer"
-                                    class="link-icon" title="Live Preview">
-                                    <i class="fa-solid fa-globe"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3 -->
-                    <article class="project-card glass-card" data-category="webapp" data-reveal="fade-up">
-                        <div class="project-thumb">
-                            <div class="thumb-gradient bg-proj-3">
-                                <div class="thumb-mockup">
-                                    <i class="fa-solid fa-list-check mockup-icon"></i>
-                                    <span>Agile Workspace</span>
-                                </div>
-                            </div>
-                            <div class="thumb-overlay">
-                                <button class="btn btn-sm btn-light open-modal-btn" data-project="3">
-                                    <i class="fa-solid fa-eye"></i> Detail Studi Kasus
-                                </button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">Vue.js</span>
-                                <span class="tag">Express.js</span>
-                                <span class="tag">Socket.io</span>
-                                <span class="tag">Redis</span>
-                            </div>
-                            <h3 class="project-title">TaskFlow - Manajemen Kolaborasi Tim Real-Time</h3>
-                            <p class="project-desc">
-                                Aplikasi papan Kanban interaktif dengan sinkronisasi drag-and-drop instan antar pengguna
-                                via WebSockets, chat tim, dan deadline tracker.
-                            </p>
-                            <div class="project-links">
-                                <button class="link-btn open-modal-btn" data-project="3">
-                                    <span>Lihat Detail</span>
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon"
-                                    title="Source Code">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://example.com" target="_blank" rel="noopener noreferrer"
-                                    class="link-icon" title="Live Preview">
-                                    <i class="fa-solid fa-globe"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 4 -->
-                    <article class="project-card glass-card" data-category="mobile" data-reveal="fade-up">
-                        <div class="project-thumb">
-                            <div class="thumb-gradient bg-proj-4">
-                                <div class="thumb-mockup">
-                                    <i class="fa-solid fa-heart-pulse mockup-icon"></i>
-                                    <span>Health Tracker UI</span>
-                                </div>
-                            </div>
-                            <div class="thumb-overlay">
-                                <button class="btn btn-sm btn-light open-modal-btn" data-project="4">
-                                    <i class="fa-solid fa-eye"></i> Detail Studi Kasus
-                                </button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">React Native</span>
-                                <span class="tag">Figma UI/UX</span>
-                                <span class="tag">Firebase</span>
-                            </div>
-                            <h3 class="project-title">FitPulse - Aplikasi Pelacak Kebugaran & Nutrisi</h3>
-                            <p class="project-desc">
-                                Desain antarmuka mobile modern yang intuitif untuk memantau kalori harian, riwayat
-                                olahraga, dan integrasi target mingguan dengan grafik menarik.
-                            </p>
-                            <div class="project-links">
-                                <button class="link-btn open-modal-btn" data-project="4">
-                                    <span>Lihat Detail</span>
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon"
-                                    title="Source Code">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://example.com" target="_blank" rel="noopener noreferrer"
-                                    class="link-icon" title="Live Preview">
-                                    <i class="fa-solid fa-globe"></i>
-                                </a>
                             </div>
                         </div>
                     </article>
@@ -682,65 +510,60 @@
         <section class="section experience-section" id="experience">
             <div class="container">
                 <div class="section-header" data-reveal="fade-up">
-                    <span class="section-subtitle">PERJALANAN KARIER</span>
-                    <h2 class="section-title">Pengalaman Kerja & Pendidikan</h2>
+                    <span class="section-subtitle">PENDIDIKAN & KEGIATAN</span>
+                    <h2 class="section-title">Riwayat Akademis & Sertifikasi</h2>
                     <div class="section-bar"></div>
                 </div>
 
                 <div class="timeline-container">
-                    <!-- Timeline Item 1 -->
+                    <!-- Timeline Item 1 (Education) -->
                     <div class="timeline-item" data-reveal="fade-up">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content glass-card">
-                            <div class="timeline-date"><i class="fa-regular fa-calendar"></i> 2023 - Sekarang</div>
-                            <h3 class="timeline-role">Senior Frontend / Full-Stack Engineer</h3>
-                            <h4 class="timeline-company">Nusantara Digital Tech • Jakarta</h4>
+                            <div class="timeline-date"><i class="fa-solid fa-graduation-cap"></i> 2024 - Sekarang (Semester 4)</div>
+                            <h3 class="timeline-role">S1 - Teknik Informatika (IPK: 3.55 / 4.00)</h3>
+                            <h4 class="timeline-company">Universitas Nusa Putra • Kota Sukabumi</h4>
                             <p class="timeline-desc">
-                                Memimpin pengembangan arsitektur frontend web aplikasi berskala besar, mengoptimalkan
-                                skor Core Web Vitals hingga mencapai 95+, dan mengelola integrasi micro-frontend tim.
+                                Aktif mempelajari konsep pemrograman, struktur data, basis data, dan analisis data. Fokus pada implementasi solusi analitik berbasis Python dan Streamlit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 (Projects) -->
+                    <div class="timeline-item" data-reveal="fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-date"><i class="fa-solid fa-code"></i> Genap 2025/2026</div>
+                            <h3 class="timeline-role">Proyek Akademis - Streamlit Web Developer</h3>
+                            <h4 class="timeline-company">Mata Kuliah: Machine Learning</h4>
+                            <p class="timeline-desc">
+                                Membangun aplikasi web interaktif untuk visualisasi data ekonomi bertema "Decent Work and Economic Growth (Target 8.3)". Berkoordinasi dengan tim terkait pembuatan aplikasi dan penyusunan laporan hasil.
                             </p>
                             <div class="timeline-tags">
-                                <span>React.js</span>
-                                <span>TypeScript</span>
-                                <span>Next.js</span>
-                                <span>CI/CD</span>
+                                <span>Python</span>
+                                <span>Streamlit</span>
+                                <span>Machine Learning</span>
+                                <span>Team Coordination</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Timeline Item 2 -->
+                    <!-- Timeline Item 3 (Certifications) -->
                     <div class="timeline-item" data-reveal="fade-up">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content glass-card">
-                            <div class="timeline-date"><i class="fa-regular fa-calendar"></i> 2021 - 2023</div>
-                            <h3 class="timeline-role">Web Developer & UI Specialist</h3>
-                            <h4 class="timeline-company">Inovasi Kreasi Studio • Bandung</h4>
+                            <div class="timeline-date"><i class="fa-solid fa-certificate"></i> Pelatihan & Sertifikasi</div>
+                            <h3 class="timeline-role">Peserta Seminar & Workshop Nasional</h3>
+                            <h4 class="timeline-company">Sertifikasi & Workshop Mandiri</h4>
                             <p class="timeline-desc">
-                                Mengembangkan lebih dari 20+ website kustom untuk klien korporat & UMKM, membangun
-                                sistem manajemen konten (CMS), dan merancang prototipe antarmuka di Figma.
+                                Aktif meningkatkan keahlian non-teknis maupun teknis melalui:
                             </p>
-                            <div class="timeline-tags">
-                                <span>JavaScript</span>
-                                <span>Node.js</span>
-                                <span>PostgreSQL</span>
-                                <span>Figma</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Timeline Item 3 (Education) -->
-                    <div class="timeline-item" data-reveal="fade-up">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-date"><i class="fa-solid fa-graduation-cap"></i> 2022 - Sekarang
-                                (Semester 5)</div>
-                            <h3 class="timeline-role">S1 - Teknik Informatika</h3>
-                            <h4 class="timeline-company">Nusa Putra University • Kota Sukabumi</h4>
-                            <p class="timeline-desc">
-                                Mahasiswa aktif dengan fokus pada Rekayasa Perangkat Lunak, Data Analytics, dan
-                                Pengembangan Web berbasis Streamlit & Python. Aktif dalam kegiatan workshop dan seminar
-                                nasional.
-                            </p>
+                            <ul class="service-features" style="border: none; padding: 0.5rem 0 0 0; margin: 0;">
+                                <li><i class="fa-solid fa-check text-green"></i> Seminar Nasional Teknik Elektro dan Aplikasi Digital Inovatif</li>
+                                <li><i class="fa-solid fa-check text-green"></i> Seminar Nasional Teknik Informatika</li>
+                                <li><i class="fa-solid fa-check text-green"></i> Workshop Program Studi Teknik Informatika</li>
+                                <li><i class="fa-solid fa-check text-green"></i> Sertifikat Public Speaking</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -751,59 +574,54 @@
         <section class="section services-section" id="services">
             <div class="container">
                 <div class="section-header" data-reveal="fade-up">
-                    <span class="section-subtitle">LAYANAN TERBAIK</span>
-                    <h2 class="section-title">Apa Yang Bisa Saya Bantu?</h2>
+                    <span class="section-subtitle">LAYANAN</span>
+                    <h2 class="section-title">Layanan & Keahlian Pendukung</h2>
                     <div class="section-bar"></div>
-                    <p class="section-desc">Solusi komprehensif mulai dari konsep desain hingga tahap rilis dan
-                        pemeliharaan.</p>
+                    <p class="section-desc">Menyediakan jasa pengelolaan data, visualisasi analisis data, dan otomatisasi sederhana berbasis Python.</p>
                 </div>
 
                 <div class="services-grid">
                     <div class="service-card glass-card" data-reveal="fade-up">
-                        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-                        <h3>Pengembangan Web Kustom</h3>
-                        <p>Membangun situs web dan web app modern, responsif, cepat, dan sesuai dengan kebutuhan
-                            spesifik bisnis Anda.</p>
+                        <div class="service-icon"><i class="fa-solid fa-file-excel"></i></div>
+                        <h3>Pencatatan & Pengelolaan Data</h3>
+                        <p>Membantu menginput data mentah, merapikan data, dan menyusun spreadsheet/database secara akurat dan konsisten.</p>
                         <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Single Page Applications (SPA)</li>
-                            <li><i class="fa-solid fa-check"></i> Server-Side Rendering (SSR)</li>
-                            <li><i class="fa-solid fa-check"></i> PWA & Offline Support</li>
+                            <li><i class="fa-solid fa-check"></i> Data Entry & Cleaning</li>
+                            <li><i class="fa-solid fa-check"></i> Pengolahan Excel / Google Sheets</li>
+                            <li><i class="fa-solid fa-check"></i> Administrasi Berkas Digital</li>
                         </ul>
                     </div>
 
                     <div class="service-card glass-card" data-reveal="fade-up">
-                        <div class="service-icon"><i class="fa-solid fa-bezier-curve"></i></div>
-                        <h3>UI / UX Design & Prototyping</h3>
-                        <p>Merancang antarmuka visual estetis dan sistem interaksi yang berpusat pada kenyamanan
-                            pengguna (User-Centered).</p>
+                        <div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3>Analisis Data & Visualisasi</h3>
+                        <p>Mengolah dataset mentah dari platform seperti Kaggle menjadi grafik analitik interaktif berbasis web.</p>
                         <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Wireframing & Figma Mockup</li>
-                            <li><i class="fa-solid fa-check"></i> Design Systems & Reusable UI</li>
-                            <li><i class="fa-solid fa-check"></i> User Flow & Usability Testing</li>
+                            <li><i class="fa-solid fa-check"></i> Dashboard Streamlit Dinamis</li>
+                            <li><i class="fa-solid fa-check"></i> Analisis Statistik Deskriptif</li>
+                            <li><i class="fa-solid fa-check"></i> Visualisasi Grafik Informatif</li>
                         </ul>
                     </div>
 
                     <div class="service-card glass-card" data-reveal="fade-up">
-                        <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
-                        <h3>Integrasi API & Backend</h3>
-                        <p>Membangun backend yang aman, integrasi API pihak ketiga (Payment Gateway, Kurir, AI), dan
-                            arsitektur database.</p>
+                        <div class="service-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                        <h3>Kolaborasi Tim & Presentasi</h3>
+                        <p>Mendukung koordinasi tim proyek, penyusunan laporan tertulis secara cepat, serta presentasi hasil kerja.</p>
                         <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> REST API & GraphQL Engine</li>
-                            <li><i class="fa-solid fa-check"></i> Authentication (JWT/OAuth)</li>
-                            <li><i class="fa-solid fa-check"></i> Database Optimization</li>
+                            <li><i class="fa-solid fa-check"></i> Koordinasi Tim Pembuatan Aplikasi</li>
+                            <li><i class="fa-solid fa-check"></i> Penyusunan Laporan Proyek Cepat</li>
+                            <li><i class="fa-solid fa-check"></i> Kemampuan Komunikasi & Public Speaking</li>
                         </ul>
                     </div>
 
                     <div class="service-card glass-card" data-reveal="fade-up">
-                        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
-                        <h3>Optimasi Performa & SEO</h3>
-                        <p>Meningkatkan kecepatan loading situs, skor Core Web Vitals, dan optimasi peringkat mesin
-                            pencari (SEO).</p>
+                        <div class="service-icon"><i class="fa-brands fa-python text-yellow"></i></div>
+                        <h3>Pemrograman Python Dasar</h3>
+                        <p>Mengembangkan skrip Python sederhana untuk melakukan tugas pembersihan data secara otomatis.</p>
                         <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Audit Kecepatan & Lazy Loading</li>
-                            <li><i class="fa-solid fa-check"></i> On-page Technical SEO</li>
-                            <li><i class="fa-solid fa-check"></i> Keamanan SSL & Header Security</li>
+                            <li><i class="fa-solid fa-check"></i> Pemrosesan File CSV / JSON</li>
+                            <li><i class="fa-solid fa-check"></i> Penggunaan Library Pandas</li>
+                            <li><i class="fa-solid fa-check"></i> Pembuatan Fungsi Otomatisasi</li>
                         </ul>
                     </div>
                 </div>
@@ -831,20 +649,20 @@
                             </div>
 
                             <div class="contact-items">
-                                <a href="mailto:rahmat.fitrah.dev@example.com" class="contact-item">
+                                <a href="mailto:rahmatfitrah125@gmail.com" class="contact-item">
                                     <div class="item-icon"><i class="fa-solid fa-envelope"></i></div>
                                     <div class="item-text">
                                         <span class="item-label">Email</span>
-                                        <span class="item-value">rahmat.fitrah.dev@example.com</span>
+                                        <span class="item-value">rahmatfitrah125@gmail.com</span>
                                     </div>
                                 </a>
 
-                                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+                                <a href="https://wa.me/6285126358473" target="_blank" rel="noopener noreferrer"
                                     class="contact-item">
                                     <div class="item-icon"><i class="fa-brands fa-whatsapp"></i></div>
                                     <div class="item-text">
                                         <span class="item-label">WhatsApp</span>
-                                        <span class="item-value">+62 812-3456-7890</span>
+                                        <span class="item-value">0851-2635-8473</span>
                                     </div>
                                 </a>
 
@@ -852,7 +670,7 @@
                                     <div class="item-icon"><i class="fa-solid fa-location-dot"></i></div>
                                     <div class="item-text">
                                         <span class="item-label">Lokasi</span>
-                                        <span class="item-value">Jakarta, Indonesia (WIB / UTC+7)</span>
+                                        <span class="item-value">JL KH. Ahmad sanusi kp kebon jati, Sukabumi</span>
                                     </div>
                                 </div>
                             </div>
@@ -952,13 +770,13 @@
                 </div>
 
                 <div class="footer-socials">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-                        class="https://github.com/Rahmat-Fitrah" aria-label="GitHub"><i
+                    <a href="https://github.com/Rahmat-Fitrah" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="GitHub"><i
                             class="fa-brands fa-github"></i></a>
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link"
                         aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                        class="https://www.instagram.com/rahmat.fitrah0?igsi=ZGhkanFwODQ0dGFy" aria-label="Instagram"><i
+                    <a href="https://www.instagram.com/rahmat.fitrah0?igsi=ZGhkanFwODQ0dGFy" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="Instagram"><i
                             class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
@@ -979,6 +797,110 @@
             <button class="modal-close" id="modalCloseBtn" aria-label="Tutup Detail Proyek">&times;</button>
             <div class="modal-body" id="modalBody">
                 <!-- Content will be injected dynamically by script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CV Preview Modal -->
+    <div class="modal-overlay" id="cvModal" aria-hidden="true" role="dialog">
+        <div class="modal-card cv-modal-card glass-card">
+            <div class="cv-modal-header">
+                <h3>Pratinjau CV Resmi</h3>
+                <div class="cv-modal-actions">
+                    <button class="btn btn-sm btn-primary" id="printCvBtn">
+                        <i class="fa-solid fa-print"></i> Cetak / Simpan PDF
+                    </button>
+                    <button class="modal-close" id="cvModalCloseBtn" aria-label="Tutup Pratinjau CV">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <!-- Printable CV Paper Sheet -->
+                <div class="cv-paper" id="cvPrintableArea">
+                    <div class="cv-header">
+                        <div class="cv-header-left">
+                            <h1 class="cv-name">Rahmat Fitrah</h1>
+                            <div class="cv-title">Mahasiswa Teknik Informatika</div>
+                        </div>
+                        <div class="cv-header-right">
+                            <div class="cv-contact-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>0851-2635-8473</span>
+                            </div>
+                            <div class="cv-contact-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>rahmatfitrah125@gmail.com</span>
+                            </div>
+                            <div class="cv-contact-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>JL KH. Ahmad sanusi kp kebon jati</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-divider"></div>
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Profil</h2>
+                        <p class="cv-section-content">
+                            Mahasiswa Teknik Informatika semester 4 dengan minat menginput data, saya juga di kampus sering mengerjakan projek input data, dan analisis data menggunakan link data dari kaggle.com.
+                        </p>
+                    </div>
+
+                    <div class="cv-divider"></div>
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Pendidikan</h2>
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <strong>S1 Teknik Informatika (Semester 4)</strong>
+                                <span class="cv-item-meta">IPK : 3.55 / 4.00</span>
+                            </div>
+                            <div class="cv-item-sub">Universitas Nusa Putra</div>
+                        </div>
+                    </div>
+
+                    <div class="cv-divider"></div>
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Projek Akademik</h2>
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <strong>DECENT WORK AND ECONOMIC GROWTH (Target 8.3)</strong>
+                                <span class="cv-item-meta">Mata Kuliah: Machine Learning | Genap 2025/2026</span>
+                            </div>
+                            <div class="cv-item-sub">Pencarian data mengenai ekonomi dengan target 8.3 & membuat laporan website menggunakan streamlit.app</div>
+                            <ul class="cv-list">
+                                <li>Membantu proses pembacaan data lebih cepat daripada membaca manual.</li>
+                                <li>Mendukung penyusunan laporan hasil analisis lebih cepat.</li>
+                                <li>Berkoordinasi dengan tim terkait proses pembuatan website Streamlit.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cv-divider"></div>
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Kemampuan</h2>
+                        <ul class="cv-grid-list">
+                            <li>Pencatatan dan pengelolaan data</li>
+                            <li>Dapat bekerjasama dengan tim</li>
+                            <li>Mudah beradaptasi dengan Lingkungan Kerja</li>
+                            <li>Ketelitian dan akurasi kerja</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-divider"></div>
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Pelatihan dan Sertifikasi</h2>
+                        <ul class="cv-bullet-list">
+                            <li>Seminar nasional Teknik Elektro dan Aplikasi Digital Inovatif</li>
+                            <li>Seminar nasional Teknik Informatika</li>
+                            <li>Workshop Prodi Teknik Informatika</li>
+                            <li>Sertifikat Public Speaking</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

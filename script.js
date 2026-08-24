@@ -293,68 +293,36 @@ function initProjectsFilter() {
    ========================================================================== */
 const projectData = {
   "1": {
-    title: "CloudPulse - Platform Analitik SaaS Real-Time",
-    category: "Web Application / SaaS",
-    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "Chart.js"],
-    overview: "CloudPulse adalah platform manajemen analitik untuk bisnis digital yang menyatukan log traffic, metrik performa server, dan konversi penjualan dalam satu dasbor terpadu.",
-    challenge: "Menghadirkan visualisasi data bervolume tinggi dengan rendering grafik 60fps tanpa membebani browser pengguna serta latensi update real-time di bawah 100ms.",
-    solution: "Mengimplementasikan WebSocket stream efisien dan client-side virtualization untuk tabel log besar, dikombinasikan dengan arsitektur serverless di Vercel.",
+    title: "Decent Work & Economic Growth (SDG 8.3)",
+    category: "Web Application / Machine Learning",
+    tags: ["Python", "Streamlit", "Pandas", "Matplotlib", "Machine Learning"],
+    overview: "Aplikasi web analitik interaktif yang dibangun untuk memetakan, menganalisis, dan menyajikan data pertumbuhan ekonomi nasional guna mendukung SDG ke-8: Pekerjaan Layak dan Pertumbuhan Ekonomi (khususnya Target 8.3).",
+    challenge: "Menyajikan data ekonomi bervolume tinggi agar dapat dipahami secara instan oleh tim riset dan pembuat keputusan tanpa harus membaca tabel data mentah secara manual.",
+    solution: "Mengembangkan visualisasi interaktif berbasis Streamlit dengan grafik tren pertumbuhan otomatis, pendeteksi anomali data, serta fitur penyusunan laporan analisis secara instan.",
     features: [
-      "Dashboard dinamis dengan widget kustom yang bisa digeser (Drag & Drop)",
-      "Ekspor laporan otomatis harian/mingguan dalam format PDF & CSV",
-      "Sistem Role & Permission manajemen tim berbasis RBAC",
-      "Notifikasi instan via Webhook Discord & Slack"
+      "Membantu proses pembacaan data lebih cepat daripada membaca manual",
+      "Mendukung penyusunan laporan hasil analisis secara instan",
+      "Berkoordinasi dengan tim terkait proses pembuatan website Streamlit",
+      "Pembersihan data otomatis dan visualisasi tren SDG 8.3"
     ],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com"
+    demoUrl: "#",
+    githubUrl: "#"
   },
   "2": {
-    title: "LuxeWear - Toko Fashion Online Interaktif",
-    category: "E-Commerce",
-    tags: ["React.js", "Node.js", "Express", "MongoDB", "Midtrans Payment", "Redux Toolkit"],
-    overview: "Situs belanja busana modern dengan pengalaman interaktif, pencarian instan dengan filter multi-kategori, dan alur checkout mulus.",
-    challenge: "Integrasi pembayaran Payment Gateway lokal yang aman dan pembaruan stok produk secara realtime guna mencegah over-ordering ketika flash sale.",
-    solution: "Menggunakan sistem transaksi database atomic MongoDB dengan locking serta webhook verifikasi enkripsi ganda untuk konfirmasi bayar otomatis.",
+    title: "Koleksi Analisis Data & Input Data",
+    category: "Data Analysis / Kaggle",
+    tags: ["Python", "Pandas", "NumPy", "EDA", "Data Cleaning"],
+    overview: "Kumpulan notebook analisis eksplorasi data (EDA) dan penginputan data mentah dari berbagai dataset publik Kaggle, dengan fokus pada pembersihan data (data cleaning) dan akurasi entri.",
+    challenge: "Mengatasi inkonsistensi entri data, nilai kosong (missing values), dan format data yang tidak beraturan dari dataset mentah.",
+    solution: "Menerapkan metode imputasi data yang tepat, otomatisasi deteksi duplikat menggunakan Python Pandas, serta menyusun dokumentasi pencatatan yang terstruktur.",
     features: [
-      "Pencarian cerdas & filter harga, ukuran, serta warna produk",
-      "Sistem keranjang belanja lokal & cloud terintegrasi",
-      "Payment Gateway (QRIS, VA Bank, E-Wallet, Kartu Kredit)",
-      "Panel dashboard admin untuk mengelola pesanan & stok"
+      "Pembersihan data (Data Cleaning) & Imputasi missing values",
+      "Analisis statistik deskriptif dan visualisasi korelasi",
+      "Pencatatan dan pengelolaan metadata dataset secara akurat",
+      "Dapat digunakan kembali (reusable) sebagai template pengolahan data"
     ],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com"
-  },
-  "3": {
-    title: "TaskFlow - Manajemen Kolaborasi Tim Real-Time",
-    category: "Productivity / SaaS",
-    tags: ["Vue.js 3", "Express.js", "Socket.io", "Redis", "Docker"],
-    overview: "Aplikasi manajemen proyek bergaya Kanban untuk tim pengembang yang mendukung kolaborasi langsung dan chat kontekstual.",
-    challenge: "Memastikan sinkronisasi status kartu tugas antar anggota tim yang sedang membuka halaman bersamaan tanpa konflik state.",
-    solution: "Pemanfaatan Socket.io dengan Redis Pub/Sub adapter untuk mendistribusikan event kolaborasi dengan latensi minimal.",
-    features: [
-      "Papan Kanban interaktif dengan drag-and-drop halus",
-      "Thread komentar dan attachment berkas pada setiap tugas",
-      "Integrasi kalender sprint dan grafik burndown tim",
-      "Dukungan mode gelap dan kustomisasi tema workspace"
-    ],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com"
-  },
-  "4": {
-    title: "FitPulse - Aplikasi Pelacak Kebugaran & Nutrisi",
-    category: "Mobile / UI/UX Design",
-    tags: ["React Native", "Figma", "Firebase Auth", "Firestore", "Lottie Animations"],
-    overview: "Desain dan prototipe aplikasi mobile komprehensif untuk pelacakan kebugaran, pola makan, dan konsistensi hidrasi.",
-    challenge: "Membuat antarmuka visual yang menyenangkan dan memotivasi pengguna untuk mempertahankan kebiasaan sehat harian.",
-    solution: "Penerapan gamifikasi dengan badge pencapaian, animasi mikro Lottie yang memikat, dan grafik tren kemajuan mingguan.",
-    features: [
-      "Pencatat asupan kalori & nutrisi harian dengan database makanan",
-      "Panduan latihan harian dengan video demonstrasi",
-      "Statistik grafik progres berat badan dan indeks massa tubuh (BMI)",
-      "Pengingat minum air otomatis dengan push notification"
-    ],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com"
+    demoUrl: "#",
+    githubUrl: "#"
   }
 };
 
@@ -497,12 +465,50 @@ function initContactForm() {
     }, 1200);
   });
 
-  // CV Download Button listener
+  // CV Download Button listener to trigger print modal
   const downloadCvBtn = document.getElementById('downloadCvBtn');
-  if (downloadCvBtn) {
+  const cvModal = document.getElementById('cvModal');
+  const cvModalCloseBtn = document.getElementById('cvModalCloseBtn');
+  const printCvBtn = document.getElementById('printCvBtn');
+
+  if (downloadCvBtn && cvModal) {
     downloadCvBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      showToast('📄 Berkas CV sedang disiapkan untuk pengunduhan.', 'success');
+      cvModal.classList.add('active');
+      cvModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      showToast('📄 Membuka Pratinjau CV Resmi Rahmat Fitrah.', 'success');
+    });
+
+    if (cvModalCloseBtn) {
+      cvModalCloseBtn.addEventListener('click', () => {
+        cvModal.classList.remove('active');
+        cvModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    }
+
+    cvModal.addEventListener('click', (e) => {
+      if (e.target === cvModal) {
+        cvModal.classList.remove('active');
+        cvModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Add Escape key handler
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && cvModal.classList.contains('active')) {
+        cvModal.classList.remove('active');
+        cvModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  if (printCvBtn) {
+    printCvBtn.addEventListener('click', () => {
+      window.print();
     });
   }
 }
