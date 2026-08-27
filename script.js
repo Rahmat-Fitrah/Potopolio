@@ -67,8 +67,7 @@ function initTypingEffect() {
   const roles = [
     'Mahasiswa Teknik Informatika',
     'Streamlit & AI',
-    'Data & Kaggle Enthusiast',
-    'Public Speaker & Tech Learner'
+    'Data & Kaggle Enthusiast'
   ];
 
   let roleIndex = 0;
