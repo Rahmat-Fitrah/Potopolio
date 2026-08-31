@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 10. Back to Top Button & Footer Year
   initBackToTop();
   document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  // 11. Interactive Physics for Hanging Profile Photo Card
+  initHangingCardPhysics();
 });
 
 /* ==========================================================================
@@ -549,3 +552,166 @@ function initBackToTop() {
     });
   });
 }
+
+/* ==========================================================================
+   11. Hanging ID Card Touch & Elastic Drag Physics (Tarik ID Card)
+   ========================================================================== */
+function initHangingCardPhysics() {
+  const idCard = document.getElementById('hangingIdCard') || document.getElementById('hangingPhotoFrame');
+  const cardWrapper = document.querySelector('.visual-card-wrapper');
+  if (!idCard) return;
+
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  let currentAngle = 0;
+  let velX = 0;
+  let velY = 0;
+  let lastX = 0;
+  let lastY = 0;
+  let lastTime = 0;
+  let physicsAnimId = null;
+
+  function getCoords(e) {
+    if (e.touches && e.touches.length > 0) {
+      return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+    return { x: e.clientX, y: e.clientY };
+  }
+
+  function startDrag(e) {
+    isDragging = true;
+    idCard.classList.add('is-dragging', 'is-physics');
+    idCard.style.animation = 'none';
+
+    if (physicsAnimId) {
+      cancelAnimationFrame(physicsAnimId);
+      physicsAnimId = null;
+    }
+
+    const pos = getCoords(e);
+    startX = pos.x;
+    startY = pos.y;
+    lastX = pos.x;
+    lastY = pos.y;
+    lastTime = performance.now();
+  }
+
+  function onMove(e) {
+    if (!isDragging) return;
+
+    // Prevent screen scrolling when pulling ID Card on mobile touch
+    if (e.cancelable && e.type.startsWith('touch')) {
+      e.preventDefault();
+    }
+
+    const pos = getCoords(e);
+    const deltaX = pos.x - startX;
+    const deltaY = pos.y - startY;
+    const now = performance.now();
+    const dt = Math.max(1, now - lastTime);
+
+    // Direct 1:1 pull displacement with elastic limit
+    currentX = deltaX * 0.85;
+    currentY = Math.max(-40, Math.min(180, deltaY * 0.85));
+    currentAngle = Math.max(-45, Math.min(45, deltaX * 0.35));
+
+    const rotX = Math.max(-30, Math.min(30, -deltaY * 0.25));
+    const rotY = Math.max(-30, Math.min(30, deltaX * 0.35));
+
+    // Move the ENTIRE ID Card badge 1:1 with user finger/mouse
+    idCard.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) rotate(${currentAngle}deg) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
+
+    // Update lanyard stretch height
+    if (cardWrapper) {
+      cardWrapper.style.setProperty('--stretch-y', `${Math.max(0, currentY)}px`);
+    }
+
+    velX = (pos.x - lastX) / dt;
+    velY = (pos.y - lastY) / dt;
+
+    lastX = pos.x;
+    lastY = pos.y;
+    lastTime = now;
+  }
+
+  function stopDrag() {
+    if (!isDragging) return;
+    isDragging = false;
+    idCard.classList.remove('is-dragging');
+
+    // Elastic Snap-Back Rubber Pendulum Simulation
+    let posX = currentX;
+    let posY = currentY;
+    let angle = currentAngle;
+    let vx = velX * 12;
+    let vy = velY * 12;
+
+    const stiffness = 0.14;
+    const damping = 0.83;
+
+    function physicsStep() {
+      if (isDragging) return;
+
+      const forceX = -stiffness * posX;
+      const forceY = -stiffness * posY;
+
+      vx = (vx + forceX) * damping;
+      vy = (vy + forceY) * damping;
+      let vAngle = (angle * -stiffness + vx * 0.3) * damping;
+
+      posX += vx;
+      posY += vy;
+      angle += vAngle;
+
+      const rotX = Math.max(-25, Math.min(25, -posY * 0.2));
+      const rotY = Math.max(-25, Math.min(25, posX * 0.3));
+
+      idCard.style.transform = `translate3d(${posX.toFixed(2)}px, ${posY.toFixed(2)}px, 0) rotate(${angle.toFixed(2)}deg) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg)`;
+
+      if (cardWrapper) {
+        cardWrapper.style.setProperty('--stretch-y', `${Math.max(0, posY)}px`);
+      }
+
+      if (Math.abs(posX) > 0.4 || Math.abs(posY) > 0.4 || Math.abs(vx) > 0.1 || Math.abs(vy) > 0.1) {
+        physicsAnimId = requestAnimationFrame(physicsStep);
+      } else {
+        // Return to normal ambient pendulum
+        idCard.style.transform = '';
+        idCard.style.animation = '';
+        idCard.classList.remove('is-physics');
+        if (cardWrapper) cardWrapper.style.removeProperty('--stretch-y');
+        physicsAnimId = null;
+        currentX = 0;
+        currentY = 0;
+        currentAngle = 0;
+      }
+    }
+
+    physicsStep();
+  }
+
+  // Mouse Events
+  idCard.addEventListener('mousedown', startDrag);
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('mouseup', stopDrag);
+
+  // Touch Events (Mobile Support with preventDefault on move)
+  idCard.addEventListener('touchstart', startDrag, { passive: false });
+  window.addEventListener('touchmove', onMove, { passive: false });
+  window.addEventListener('touchend', stopDrag);
+  window.addEventListener('touchcancel', stopDrag);
+
+  // Click/Tap Impulse (Klik/Sentuh untuk ayunan pegas)
+  idCard.addEventListener('click', (e) => {
+    if (Math.abs(currentX) > 5 || Math.abs(currentY) > 5) return;
+    currentAngle = (Math.random() > 0.5 ? 1 : -1) * 20;
+    currentY = 35;
+    stopDrag();
+  });
+}
+
+
+

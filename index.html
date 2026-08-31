@@ -140,54 +140,92 @@
                     </div>
                 </div>
 
-                <!-- Hero Visual / Interactive Card -->
+                <!-- Hero Visual / Interactive ID Card -->
                 <div class="hero-visual" data-reveal="fade-left">
                     <div class="visual-card-wrapper">
-                        <!-- Glassmorphism Code / Avatar Card -->
-                        <div class="profile-card glass-card">
-                            <div class="card-header">
-                                <div class="window-controls">
-                                    <span class="ctrl-dot red"></span>
-                                    <span class="ctrl-dot yellow"></span>
-                                    <span class="ctrl-dot green"></span>
-                                </div>
-                                <div class="window-title">developer_profile.ts</div>
-                                <div class="badge-status">Online</div>
+                        <!-- Suspensi Lanyard / Tali Gantungan ID Card -->
+                        <div class="id-suspension">
+                            <div class="id-pin" title="Pin Gantungan Dinding">
+                                <div class="pin-shine"></div>
+                            </div>
+                            <div class="id-lanyard lanyard-left"></div>
+                            <div class="id-lanyard lanyard-right"></div>
+                            <div class="lanyard-clip"></div>
+                        </div>
+
+                        <!-- ID Card Badge Gantung Interaktif (Bisa Disentuh & Digeser User) -->
+                        <div class="id-card-badge glass-card" id="hangingIdCard"
+                            title="Sentuh atau geser ID Card ini untuk mengayunkannya!">
+                            <!-- Lubang Slot Klip ID Card -->
+                            <div class="id-card-slot">
+                                <div class="slot-hole"></div>
                             </div>
 
-                            <div class="profile-avatar-container">
-                                <div class="avatar-ring">
-                                    <div class="avatar-img-box">
-                                        <!-- Foto Profil Bulat - Ganti src dengan path foto Anda -->
-                                        <img src="c:\Users\hp\Downloads\Foto.png" alt="Foto Profil Rahmat Fitrah"
-                                            class="avatar-photo"
-                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                        <!-- Fallback siluet jika foto belum ada -->
-                                        <div class="avatar-fallback" style="display:none;">
-                                            <i class="fa-solid fa-user"></i>
-                                        </div>
+                            <!-- Header Instansi / Kampus -->
+                            <div class="id-card-header">
+                                <div class="id-univ-logo">
+                                    <i class="fa-solid fa-graduation-cap text-cyan"></i>
+                                </div>
+                                <div class="id-univ-text">
+                                    <span class="id-univ-name">NUSA PUTRA UNIVERSITY</span>
+                                    <span class="id-univ-sub">Informatika • ID Card Resmi</span>
+                                </div>
+                            </div>
+
+                            <!-- Foto Profil Rahmat Fitrah dalam Bingkai ID Card -->
+                            <div class="id-photo-container">
+                                <div class="id-photo-frame">
+                                    <img src="profile.jpg" alt="Foto Profil Rahmat Fitrah" class="id-photo"
+                                        onerror="if(!this.dataset.failed){this.dataset.failed='true'; this.src='C:/Users/hp/.gemini/antigravity-ide/brain/a08e01b6-5dd9-449c-a9bf-017bd9bfc502/.user_uploaded/media_1788163558546.jpg';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                                    <div class="avatar-fallback" style="display:none;">
+                                        <i class="fa-solid fa-user"></i>
                                     </div>
                                 </div>
-                                <div class="floating-badge badge-top">
-                                    <i class="fa-solid fa-graduation-cap text-cyan"></i>
-                                    <span>Nusa Putra University</span>
-                                </div>
-                                <div class="floating-badge badge-bottom">
-                                    <i class="fa-brands fa-python text-yellow"></i>
-                                    <span>Streamlit & Python</span>
+                                <div class="id-status-badge">
+                                    <span class="status-pulse-ring"></span> ACTIVE
                                 </div>
                             </div>
 
-                            <!-- Mini Code Snippet in Card -->
-                            <div class="code-snippet-box">
-                                <pre><code><span class="c-keyword">import</span> streamlit <span class="c-keyword">as</span> st
-<span class="c-keyword">import</span> pandas <span class="c-keyword">as</span> pd
+                            <!-- Informasi Pemegang ID Card -->
+                            <div class="id-card-info">
+                                <h3 class="id-name">RAHMAT FITRAH</h3>
+                                <p class="id-title">DATA ANALYST & ENTRY</p>
+                                <div class="id-details-grid">
+                                    <div class="id-detail-item">
+                                        <span class="detail-label">IPK</span>
+                                        <span class="detail-val">3.55</span>
+                                    </div>
+                                    <div class="id-detail-item">
+                                        <span class="detail-label">SEMESTER</span>
+                                        <span class="detail-val text-cyan">5</span>
+                                    </div>
+                                </div>
+                            </div>
 
-st.title(<span class="c-str">"Analisis Data Rahmat Fitrah 📊"</span>)
-df = pd.read_csv(<span class="c-str">"data_kaggle.csv"</span>)
-st.write(df.describe())</code></pre>
+                            <!-- Footer ID Card (Chip & Barcode) -->
+                            <div class="id-card-footer">
+                                <div class="id-smart-chip" title="RFID Smart Chip">
+                                    <div class="chip-grid"></div>
+                                </div>
+                                <div class="id-barcode-box">
+                                    <div class="barcode-lines"></div>
+                                    <span class="barcode-num">ID: RF-2024-NPU</span>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badges -->
+                            <div class="floating-badge badge-top">
+                                <i class="fa-solid fa-code text-cyan"></i>
+                                <span>Python & SQL</span>
+                            </div>
+                            <div class="floating-badge badge-bottom">
+                                <i class="fa-brands fa-python text-yellow"></i>
+                                <span>Streamlit Apps</span>
                             </div>
                         </div>
+
+                        <!-- Bayangan Mengayun ID Card -->
+                        <div class="id-card-shadow"></div>
                     </div>
                 </div>
             </div>
@@ -214,7 +252,7 @@ st.write(df.describe())</code></pre>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-number" data-target="97">0</div>
                         <div class="stat-suffix">%</div>
                         <p class="stat-label">Ketelitian Kerja</p>
                     </div>
@@ -475,7 +513,8 @@ st.write(df.describe())</code></pre>
                                 ekonomi, mempercepat pemahaman tren dibanding cara manual.
                             </p>
                             <div class="project-links">
-                                <a href="https://kelompokml.streamlit.app/" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                <a href="https://kelompokml.streamlit.app/" target="_blank" rel="noopener noreferrer"
+                                    class="link-btn">
                                     <span>Live Demo</span>
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
@@ -562,7 +601,10 @@ st.write(df.describe())</code></pre>
                             <p class="timeline-desc">
                                 Membangun aplikasi web interaktif untuk visualisasi data ekonomi bertema "Decent Work
                                 and Economic Growth (Target 8.3)". Berkoordinasi dengan tim terkait pembuatan aplikasi
-                                dan penyusunan laporan hasil. (<a href="https://kelompokml.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">Lihat Demo App</a>)
+                                dan penyusunan laporan hasil. (<a href="https://kelompokml.streamlit.app/"
+                                    target="_blank" rel="noopener noreferrer"
+                                    style="color: var(--accent-primary); text-decoration: underline;">Lihat Demo
+                                    App</a>)
                             </p>
                             <div class="timeline-tags">
                                 <span>Python</span>
@@ -904,7 +946,10 @@ st.write(df.describe())</code></pre>
                                 <span class="cv-item-meta">Mata Kuliah: Machine Learning | Genap 2025/2026</span>
                             </div>
                             <div class="cv-item-sub">Pencarian data mengenai ekonomi dengan target 8.3 & membuat laporan
-                                website menggunakan <a href="https://kelompokml.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">kelompokml.streamlit.app</a></div>
+                                website menggunakan <a href="https://kelompokml.streamlit.app/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    style="color: var(--accent-primary); text-decoration: underline;">kelompokml.streamlit.app</a>
+                            </div>
                             <ul class="cv-list">
                                 <li>Membantu proses pembacaan data lebih cepat daripada membaca manual.</li>
                                 <li>Mendukung penyusunan laporan hasil analisis lebih cepat.</li>

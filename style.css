@@ -567,15 +567,442 @@ img {
   transform: translateY(-3px);
 }
 
-/* Hero Visual Profile Card */
+/* --- Hanging ID Card Badge (Kartu ID Resmi & Interaktif) --- */
 .visual-card-wrapper {
   position: relative;
+  padding-top: 65px;
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
 }
 
-.profile-card {
-  padding: 1.5rem;
+/* Suspensi Lanyard Gantungan ID Card */
+.id-suspension {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 68px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.id-pin {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff, #475569 70%, #0f172a 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 0 0 16px var(--accent-glow);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.id-pin .pin-shine {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+}
+
+.id-lanyard {
+  position: absolute;
+  top: 11px;
+  height: calc(52px + var(--stretch-y, 0px));
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent-secondary), var(--accent-primary));
+  box-shadow: 0 0 10px var(--accent-glow);
+  transform-origin: top center;
+  transition: height 0.04s linear;
+}
+
+.id-lanyard.lanyard-left {
+  left: 50%;
+  transform: rotate(-22deg);
+}
+
+.id-lanyard.lanyard-right {
+  left: 50%;
+  transform: rotate(22deg);
+}
+
+.lanyard-clip {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 14px;
+  background: linear-gradient(135deg, #cbd5e1, #475569);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Kartu ID Card Gantung Utama (Bisa Disentuh & Digeser User) */
+.id-card-badge {
+  width: 310px;
+  padding: 1.5rem 1.25rem 1.2rem 1.25rem;
   position: relative;
+  transform-origin: top center;
+  animation: idCardSwing 6.5s ease-in-out infinite;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  z-index: 5;
+  border-radius: 22px;
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 35px var(--accent-glow);
+  transition: box-shadow 0.3s ease, filter 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.id-card-badge:active,
+.id-card-badge.is-dragging,
+.id-card-badge.is-physics {
+  cursor: grabbing;
+  animation: none !important;
+  transition: none !important;
+}
+
+.id-card-badge:hover {
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.6), 0 0 50px var(--accent-primary);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+/* Slot Lubang Klip ID Card */
+.id-card-slot {
+  width: 45px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  margin-top: -0.5rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot-hole {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* Header Kampus / Instansi */
+.id-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.id-univ-logo {
+  font-size: 1.5rem;
+}
+
+.id-univ-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.id-univ-name {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+}
+
+.id-univ-sub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Bingkai Foto Profil Resmi */
+.id-photo-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.id-photo-frame {
+  width: 135px;
+  height: 165px;
+  border-radius: 16px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-primary);
+  box-shadow: 0 0 25px var(--accent-glow);
   overflow: hidden;
+}
+
+.id-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.id-status-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid #10b981;
+  color: #10b981;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Informassi ID Card */
+.id-card-info {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.id-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.15rem;
+  color: var(--text-primary);
+}
+
+.id-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-secondary);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.id-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+}
+
+.id-detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.detail-val {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Footer (RFID Smart Chip & Barcode) */
+.id-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+.id-smart-chip {
+  width: 32px;
+  height: 24px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border: 1px solid #fef08a;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.chip-grid {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.3) 41%);
+}
+
+.id-barcode-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.barcode-lines {
+  width: 110px;
+  height: 18px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--text-primary),
+    var(--text-primary) 2px,
+    transparent 2px,
+    transparent 4px,
+    var(--text-primary) 4px,
+    var(--text-primary) 7px
+  );
+  opacity: 0.85;
+}
+
+.barcode-num {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Tooltip Hint */
+.id-touch-hint {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--accent-primary);
+  color: var(--text-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.id-card-badge:hover .id-touch-hint,
+.id-card-badge.is-dragging .id-touch-hint {
+  opacity: 1;
+  background: var(--accent-primary);
+  color: #ffffff;
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Bayangan Mengayun ID Card */
+.id-card-shadow {
+  width: 85%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 75%);
+  position: absolute;
+  bottom: -32px;
+  left: 7.5%;
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: idShadowPendulum 6.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Keyframes ID Card Swing */
+@keyframes idCardSwing {
+  0% { transform: rotate(-5.5deg); }
+  25% { transform: rotate(0deg) translateY(-2px); }
+  50% { transform: rotate(5.5deg); }
+  75% { transform: rotate(0deg) translateY(-2px); }
+  100% { transform: rotate(-5.5deg); }
+}
+
+@keyframes idShadowPendulum {
+  0% { transform: translateX(16px) scaleX(0.9); opacity: 0.5; }
+  50% { transform: translateX(-16px) scaleX(1.1); opacity: 0.8; }
+  100% { transform: translateX(16px) scaleX(0.9); opacity: 0.5; }
+}
+
+/* Keyframes Ayunan Gantung & Bayangan */
+@keyframes hangingPendulum {
+  0% {
+    transform: rotate(-3.5deg) translateY(0);
+  }
+  25% {
+    transform: rotate(0deg) translateY(-2px);
+  }
+  50% {
+    transform: rotate(3.5deg) translateY(0);
+  }
+  75% {
+    transform: rotate(0deg) translateY(-2px);
+  }
+  100% {
+    transform: rotate(-3.5deg) translateY(0);
+  }
+}
+
+@keyframes shadowPendulum {
+  0% {
+    transform: translateX(14px) scaleX(0.92);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateX(-14px) scaleX(1.08);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(14px) scaleX(0.92);
+    opacity: 0.55;
+  }
+}
+
+.status-pulse-ring {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  margin-right: 6px;
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
 }
 
 .card-header {
