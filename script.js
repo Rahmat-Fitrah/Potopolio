@@ -304,7 +304,7 @@ const projectData = {
       "Berkoordinasi dengan tim terkait proses pembuatan website Streamlit",
       "Pembersihan data otomatis dan visualisasi tren SDG 8.3"
     ],
-    demoUrl: "#",
+    demoUrl: "https://kelompokml.streamlit.app/",
     githubUrl: "#"
   },
   "2": {
